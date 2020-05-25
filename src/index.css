@@ -1,13 +1,182 @@
+/* ====================== Tablet Portrait and Up (Overrides Mobile Styles) ========================== */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+    background-image: url("header-bg.jpg");
 }
+
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #212529;
+    position: relative;
+}
+
+.logo img {
+    width: 180px;
+    padding: 20px;
+}
+
+.nav-mobile {
+    display: inline-block;
+}
+/*@keyframes slide-down {*/
+/*    0%{height: 0px;}*/
+/*    100%{*/
+/*        height: 333px;}*/
+/*}*/
+/*@keyframes slide-up {*/
+/*    0%{*/
+/*        height: 333px;}*/
+/*    100%{height: 0px;}*/
+/*}*/
+.nav-desktop {
+    display: none;
+}
+
+.nav-mobile div {
+    position: absolute;
+    left: 0px;
+    top: 74px;
+    width: 100%;
+    background-color: #212529;
+    overflow: hidden;
+    /*display: none;*/
+    transition: all 1s;
+}
+.nav-mobile.open div {
+    height: 350px;
+    /*display: inline-block;*/
+    /*animation: ease-in-out;*/
+    /*animation-name: slide-down;*/
+    /*animation-duration: 2s;*/
+    /*overflow: hidden;*/
+}
+.nav-mobile.closed div {
+    height: 0px;
+    /*animation-timing-function: ease-out;*/
+    /*animation-name: slide-up;*/
+    /*animation-duration: 2s;*/
+    overflow: hidden;
+}
+.nav-mobile ul {
+    text-align: left;
+}
+.nav-mobile a, .nav-desktop a {
+
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.nav-mobile a {
+    display: block;
+}
+
+.nav-mobile a:hover, .nav-desktop a:hover {
+    color: #FED136;
+}
+
+.menu-button {
+    background-color: #FED136;
+    padding: 12px;
+    border-radius: 5px;
+    font-family: Arial;
+    color: white;
+    font-size: 12px;
+    border: 0px;
+    margin: 15px;
+}
+
+.hero-text span {
+    font-size: 36px;
+    font-family: "Droid Serif";
+    font-style: italic;
+}
+
+.hero-text {
+    padding: 40px;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.hero-text h1 {
+    padding: 30px;
+    margin: 0px;
+}
+
+.tell-me-more {
+    background-color: #FED136;
+    padding: 25px 40px;
+    border-radius: 5px;
+    font-family: Arial;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 40px;
+    border: 0px;
+}
+
+
+/*End mobile and up styles*/
+
+
+/* ====================== Tablet Portrait and Up (Overrides Mobile Styles) ========================== */
+@media only screen and (min-width: 768px) {
+
+}
+
+/*end media query*/
+
+/*End tablet and up styles*/
+
+/* ====================== Tablet Landscape and Up (Overrides Mobile and Tablet Portrait Styles) ========================== */
+@media only screen and (min-width: 992px) {
+    header {
+        background-color: transparent;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .nav-desktop {
+        display: inline-block;
+    }
+
+}
+
+/*end media query*/
+/*End landscape tablet and up styles*/
+
+
+/* ====================== Desktop Only (Overrides Mobile and Tablet Styles) ========================== */
+@media only screen and (min-width: 1200px) {
+    header {
+        background-color: transparent;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .nav-desktop {
+        display: inline-block;
+    }
+
+    .hero-text {
+        padding: 200px;
+    }
+}
+
+/*end media query*/
+/*End desktop only styles*/
